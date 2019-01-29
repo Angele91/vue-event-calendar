@@ -40,7 +40,10 @@ export default {
   },
   props: {
     title: String,
+<<<<<<< HEAD
     panelBg: String,
+=======
+>>>>>>> d3210685dfde12b313c540012cf1001723e27b40
     events: {
       type: Array,
       required: true,
@@ -174,7 +177,11 @@ export default {
     }
   }
 }
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
+=======
+@media screen and (max-width: 767px) {
+>>>>>>> d3210685dfde12b313c540012cf1001723e27b40
   .__vev_calendar-wrapper{
     .cal-wrapper{
       width: 100%;
