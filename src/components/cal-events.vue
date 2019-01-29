@@ -5,7 +5,7 @@
     </h2>
     <div class="cal-events">
       <slot>
-        <div v-for="(event, index) in events" class="event-item">
+        <div v-for="(event, index) in events" class="event-item" :key=index>
           <cal-event-item :event="event" :index="index" :locale="locale"></cal-event-item>
         </div>
       </slot>
@@ -28,6 +28,7 @@ export default {
     'cal-event-item': calEventItem
   },
   props: {
+    bgImage: String,
     title: String,
     dayEvents: {
       type: Object,
@@ -62,7 +63,7 @@ export default {
       return this.dayEvents.events
     },
     bgColor () {
-      return {backgroundColor: this.color}
+      return this.bgImage ? {backgroundImage: `url(${this.bgImage})`, backgroundSize: "cover"} : {backgroundColor: this.color}
     }
   },
   methods: {

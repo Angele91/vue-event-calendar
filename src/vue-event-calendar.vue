@@ -11,6 +11,7 @@
       :title="title"
       :dayEvents="selectedDayEvents"
       :locale="calendarOptions.options.locale"
+      :bgImage="panelBg"
       :color="calendarOptions.options.color">
       <slot :showEvents="selectedDayEvents.events"></slot>
     </cal-events>
@@ -39,6 +40,7 @@ export default {
   },
   props: {
     title: String,
+    panelBg: String,
     events: {
       type: Array,
       required: true,
